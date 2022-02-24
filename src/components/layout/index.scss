@@ -1,0 +1,30 @@
+.layout {
+    width: calc(100% - 200px);
+    height: 100%;
+    // background-color: rebeccapurple;
+    box-sizing: border-box;
+    padding: 50px 50px;
+
+    & .card-items {
+        display: flex;
+    }
+
+    & .dashboard-details {
+        margin-top: 50px;
+        display: flex;
+
+        & .chart-section {
+            & .chart-title {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            margin-right: 40px;
+        }
+
+        & .daily-progress {
+
+        }
+    }
+}

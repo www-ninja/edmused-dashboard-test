@@ -1,0 +1,74 @@
+.side-bar {
+    width: 200px;
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    background-color: #232323;
+
+    & .app-logo {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    & ul {
+        margin-top: 100px;
+        list-style: none;
+
+        & li {
+            color: #898989;
+            font-size: 12px;
+            font-weight: 800;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 20px;            
+            cursor: pointer;
+            position: relative;
+
+            & i {
+                margin-right: 10px;
+                font-size: 14px;
+            }
+
+            &:hover {
+                color: white;
+            }
+
+            &:last-child {
+                margin-top: 300px;
+            }
+
+            &.active {
+                background-color: white;
+                border-radius: 50px 0 0 50px;
+                color: black;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background-color: transparent;
+                    height: 50px;
+                    right: 0;
+                    top: 50px;
+                    width: 25px;
+                    border-top-right-radius: 25px;
+                    box-shadow: 0 -25px 0 0 white;
+                }
+                
+                &:before {
+                    content: "";
+                    position: absolute;
+                    background-color: transparent;
+                    top: -50px;
+                    right: 0;
+                    height: 50px;
+                    width: 25px;
+                    border-bottom-right-radius: 25px;
+                    box-shadow: 0 25px 0 0 white; /* This is where the magic happens! */
+                }
+            }
+        }
+    }
+}
